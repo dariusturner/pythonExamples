@@ -1,11 +1,13 @@
 # Print Hello World to console
-print('How to print section')
+sectionName = "How To Print"
+print('{} Section'.format(sectionName))
 
 print('Hello World')
 
 # Math Operators
 #########################################################
-print('Math Operators Section')
+sectionName = 'Math Operators'
+print('{} Section'.format(sectionName))
 
 print(22 - 5)
 
@@ -35,6 +37,7 @@ myVar = myVar * 3
 
 print(myVar)
 
+# The Type function is used to see if a value is a int, float, str, Boolean, list, etc...
 print(type(myVar))
 
 floatvar = 1.5
@@ -43,8 +46,8 @@ print(type(floatvar))
 
 # Strings
 ###########################################################
-
-print('Strings Section')
+sectionName = 'Strings'
+print('{} Section'.format(sectionName))
 
 print("This is a string that's using two types of quotes!")
 
@@ -145,5 +148,57 @@ i = 'interesting'
 print(f'Hello my name is {name}!')
 print(f'Hello my name is {name} and I am learning {p}! I find it very {i}!')
 
-# Lists
+# Lists (Arrays)
 ###################################################################
+sectionName = 'Lists'
+print('{} Section'.format(sectionName)) 
+
+my_list = ['string', 1,  83.8]
+
+print(len(my_list))
+print(my_list[:2])
+
+firstList = ['one', 'two', 'three']
+secondList = ['four', 'five', 'six']
+
+firstList = firstList + secondList
+
+print(firstList + secondList)
+print(firstList)
+
+# Lists are mutable
+firstList[3] = 'How did I get here?'
+print(firstList)
+
+firstList.append('seven')
+print(firstList)
+print(firstList.pop())
+
+# Pop still pops off the last index in the list firstList
+print(firstList)
+
+poppedItem = firstList.pop()
+print(poppedItem)
+
+# Can add index to pop function to remove a target index from your list
+print(firstList.pop(3))
+
+# Sort function
+letterList = ['a','d','j','c']
+numList = [5,8,6,5]
+
+letterList.sort()
+print(letterList)
+
+numList.sort()
+sortedList = numList
+print(sortedList)
+
+# Reverse function reverses the indexes in a list
+sortedList.reverse()
+print(sortedList)
+
+# Nested List
+sortedList.append([9,95,9])
+print(sortedList)
+print(sortedList[4][1])
