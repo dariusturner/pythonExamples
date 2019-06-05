@@ -202,3 +202,38 @@ print(sortedList)
 sortedList.append([9,95,9])
 print(sortedList)
 print(sortedList[4][1])
+
+# Dictionaries
+############################################################
+sectionName = 'Dictionaries'
+print('{} Section'.format(sectionName))
+
+my_dict = {'key1':'value1','key2':'value2'}
+#Get vaule1
+print(my_dict['key1'])
+food_list = {'apples':2.99,'fruit package':9.99,'banana':0.60}
+print('How much is the fruit package? Price = ${}!'.format(food_list['fruit package']))
+
+# How to get nested values from lists or dictionaries
+
+example_dict = {'k1':[1,2,3],'k2':{'lvl2':"I am a level two's value, I hope you printed me to your console!"}}
+
+#Print 3
+print(example_dict['k1'][2])
+#print lvl2 value
+print(example_dict['k2']['lvl2'])
+
+#### Dictionaries are mutable #####
+
+# Uppercase lvl2 vaulue
+print(example_dict['k2']['lvl2'].upper())
+
+# How to add a new key and value to a dictionary
+example_dict['k3'] = "I'm your third key's value!"
+print(example_dict)
+
+# How to change a key's value
+example_dict['k1'] = 3
+print(example_dict['k1'])
+
+#Dictionaries are mappings and do not retain order! If you do want the capabilities of a dictionary but you would like ordering as well, check out the ordereddict object!
