@@ -237,3 +237,25 @@ example_dict['k1'] = 3
 print(example_dict['k1'])
 
 #Dictionaries are mappings and do not retain order! If you do want the capabilities of a dictionary but you would like ordering as well, check out the ordereddict object!
+
+# Tuples
+###########################################################
+sectionName = 'Tuples'
+print('{} Section'.format(sectionName))
+
+# Tuples are like lists but are immutable and use parethesis!
+t = (1,2,3)
+l = [1,2,3]
+print(type(t))
+print(type(l))
+
+# Count function counts how many times a value is in your str, variable, list, etc...
+l = [1,1,1]
+print(l.count(1))
+print(t.count(3))
+
+# Index function show what the first index of the value give is found at
+print(t.index(2))
+print(l.index(1))
+
+# Tuples are used when you have a list but you don't want to accidently change a value in the list
