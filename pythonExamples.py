@@ -556,6 +556,63 @@ print(min(numList))
 print(max(numList))
 # Prints 12
 
+# Import Libraries Section
+#################################################################################################
+sectionName = 'Import Libraries'
+print(f'{sectionName} Section')
+
+# From Random library import Shuffle function that changes the order of things
+from random import shuffle
+
+numList = [1,2,3,4,5]
+shuffle(numList)
+print(numList)
+
+############ CANNOT USE SHUFFLE FUNCTION ON STRINGS
+
+# Random Interger function - grabs a random number in a defined range
+from random import randint
+
+print(randint(0,10000))
+
+# Input function takes in user input
+
+# INT changes the input to an integer to use in the if statement
+usersAge = int(input('Please enter your age...'))
+
+if usersAge >= 21:
+    print("Want to go to the bar?")
+else:
+    print("You can't even drink yet!")
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
