@@ -831,14 +831,13 @@ print(f'{sectionName} Test' * 8)
 st = 'Print only the words that start with s in this sentence'
 st = st.split()
 for word in st:
-    for letter in word:
-        if letter == 's':
-            print(word)
+    if word[0] == 's':
+        print(word)
 
 #Use range() to print all the even numbers from 0 to 10.
 
 #Code Here
-for num in range(11):
+for num in range(0,11,2):
     print(num)
 
 #Use a List Comprehension to create a list of all numbers between 1 and 50 that are divisible by 3.
@@ -871,5 +870,5 @@ st = 'Create a list of the first letters of every word in this string'
 
 #Code here
 firstLetters = []
-[firstLetters.append(word[0]) for word in st.split(' ') if word[0] == word[0]]
+[word[0] for word in st.split(' ')]
 print(firstLetters)
