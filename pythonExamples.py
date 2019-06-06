@@ -4,7 +4,7 @@ print('{} Section'.format(sectionName))
 
 print('Hello World')
 
-# Math Operators
+# Math Operators Section
 #########################################################
 sectionName = 'Math Operators'
 print('{} Section'.format(sectionName))
@@ -44,7 +44,7 @@ floatvar = 1.5
 
 print(type(floatvar))
 
-# Strings
+# Strings Section
 ###########################################################
 sectionName = 'Strings'
 print('{} Section'.format(sectionName))
@@ -148,7 +148,7 @@ i = 'interesting'
 print(f'Hello my name is {name}!')
 print(f'Hello my name is {name} and I am learning {p}! I find it very {i}!')
 
-# Lists (Arrays)
+# Lists (Arrays) Section
 ###################################################################
 sectionName = 'Lists'
 print('{} Section'.format(sectionName)) 
@@ -203,7 +203,7 @@ sortedList.append([9,95,9])
 print(sortedList)
 print(sortedList[4][1])
 
-# Dictionaries
+# Dictionaries Section
 ############################################################
 sectionName = 'Dictionaries'
 print('{} Section'.format(sectionName))
@@ -238,7 +238,7 @@ print(example_dict['k1'])
 
 #Dictionaries are mappings and do not retain order! If you do want the capabilities of a dictionary but you would like ordering as well, check out the ordereddict object!
 
-# Tuples
+# Tuples Section
 ###########################################################
 sectionName = 'Tuples'
 print('{} Section'.format(sectionName))
@@ -259,3 +259,42 @@ print(t.index(2))
 print(l.index(1))
 
 # Tuples are used when you have a list but you don't want to accidently change a value in the list
+
+# Sets Section
+###############################################################
+sectionName = 'Sets'
+print('{} Section'.format(sectionName))
+
+# Sets are unordered collections of unique elements.
+mySet = set()
+
+# Add function lets you add an element to a set
+mySet.add(1)
+print(mySet)
+
+# Sets won't add the same value so all values in a set are unique
+mySet.add(1)
+print(mySet)
+
+# Make a List into a Set
+myList = [1,1,4,5,5,5,5,7,6,6]
+print(set(myList))
+
+# Boolean Section
+##################################################################
+sectionName = "Boolean"
+print('{} Section'.format(sectionName))
+
+# Booleans convey True or False Statments
+
+True
+False
+print(1 < 2)
+print(1 == 2)
+
+print(type(1 < 2))
+
+# None can be a place holder for a variable if you do not want to give it a value initially
+empty = None
+print(empty)
+print(type(empty))
