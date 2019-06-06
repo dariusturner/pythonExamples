@@ -298,3 +298,233 @@ print(type(1 < 2))
 empty = None
 print(empty)
 print(type(empty))
+
+# Comparison Operators Section
+##################################################################
+sectionName = 'Comparison Operators'
+print('{} Section'.format(sectionName))
+
+# The AND comparision operator has to have both statements to be True in order to be True
+1 > 0.5 and 0.5 <= 1/2
+True
+
+1 > 0.5 and 0.5 >= 1/2
+False
+
+# The OR comparison operator needs just one statement to be True in order to be True
+
+(100 == 20) or (100 != "100")
+True
+
+(100 == 20) or (100 == "100")
+False
+
+# The NOT comparison operator just gives you the oposite Boolean that the statement is
+
+not 1 == 1
+False
+
+not 1 != 1
+True
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''' #######################################################################################################################
+# Test # 1
+#######################################################################################################################
+print('STARTING FIRST TEST! ' * 3)
+# Write an equation that uses multiplication, division, an exponent, addition, and subtraction that is equal to 100.25.
+
+answer = ((100.25/ 2 * 2 - 2)**0 + 99.25)
+
+print(answer)
+
+# NUMBERS Test
+############################################
+# Answer these 3 questions without typing code. Then type code to check your answer.
+
+# What is the value of the expression 4 * (6 + 5)
+answer = 44
+# What is the value of the expression 4 * 6 + 5 
+answer = 29
+# What is the value of the expression 4 + 6 * 5 
+answer = 34
+
+# What is the type of the result of the expression 3 + 1.5 + 4?
+
+########## The results type is a float
+
+# What would you use to find a number’s square root, as well as its square?
+
+squared = 4**4
+squaredRoot = 16 ** (0.5)
+
+# STRINGS Test
+##############################################
+# Given the string 'hello' give an index command that returns 'e'. Enter your code in the cell below:
+
+s = 'hello'
+# Print out 'e' using indexing
+
+print(s[1])
+
+# Reverse the string 'hello' using slicing:
+
+s ='hello'
+# Reverse the string using slicing
+
+print(s[::-1])
+
+# Given the string hello, give two methods of producing the letter 'o' using indexing.
+
+s ='hello'
+# Print out the 'o'
+
+# Method 1:
+print(s[-1])
+# Method 2:
+print(s[-1:])
+
+
+# LISTS Test
+######################################################
+
+# Build this list [0,0,0] two separate ways.
+
+# Method 1:
+testList1 = [0,0,0]
+# Method 2:
+testList2 = [0] * 3
+
+print('This is the result from testList1 {} and this is the result from testList2 {}.'.format(testList1, testList2))
+
+# Reassign 'hello' in this nested list to say 'goodbye' instead:
+list3 = [1,2,[3,4,'hello']]
+
+list3[2][2] = 'goodbye'
+print(list3)
+
+# Sort the list below:
+list4 = [5,3,4,6,1]
+
+list4.sort()
+print(list4)
+
+# DICTIONARIES Test
+#########################################################
+
+# Using keys and indexing, grab the 'hello' from the following dictionaries:
+
+d = {'simple_key':'hello'}
+# Grab 'hello'
+print(d['simple_key'])
+
+d = {'k1':{'k2':'hello'}}
+# Grab 'hello'
+print(d['k1']['k2'])
+
+# Getting a little tricker
+d = {'k1':[{'nest_key':['this is deep',['hello']]}]}
+
+#Grab hello
+print(d['k1'][0]['nest_key'][1][0])
+
+# This will be hard and annoying!
+d = {'k1':[1,2,{'k2':['this is tricky',{'tough':[1,2,['hello']]}]}]}
+print(d['k1'][2]['k2'][1]['tough'][2][0])
+
+# TUPLES Test
+#########################################################
+
+# What is the major difference between tuples and lists?
+####### Tuples are immutable while lists are mutable. Meaning that tuple's values can't be changed through assigning
+
+# How do you create a tuple?
+tup = (1,2,3)
+
+# SETS Test
+#########################################################
+
+# What is unique about a set?
+
+####### Sets can only have unique values in it, so if you have duplicate values in a list or tuple and turn it into a set... Any duplicate values will no longer be in the list and will show only unique values in the list.
+
+# Use a set to find the unique values of the list below:
+list5 = [1,2,2,33,4,4,11,22,3,3,2]
+
+print(set(list5))
+
+# BOOLEANS Test
+#########################################################
+
+# What will be the resulting Boolean of the following pieces of code (answer fist then check by typing it in!)
+
+# Answer before running cell
+2 > 3
+False
+# Answer before running cell
+3 <= 2
+False
+# Answer before running cell
+3 == 2.0
+False
+# Answer before running cell
+3.0 == 3
+True
+# Answer before running cell
+4**0.5 != 2
+False
+
+# Final Question: What is the boolean output of the cell block below?
+
+# two nested lists
+l_one = [1,2,[3,4]]
+l_two = [1,2,{'k1':4}]
+
+# True or False?
+l_one[2][0] >= l_two[2]['k1']
+
+answer = False
+
+print('This Test Has Ended! ' * 4) ''''
