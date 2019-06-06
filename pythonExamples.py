@@ -578,22 +578,59 @@ print(randint(0,10000))
 # Input function takes in user input
 
 # INT changes the input to an integer to use in the if statement
-usersAge = int(input('Please enter your age...'))
+'''usersAge = int(input('Please enter your age...'))
 
-if usersAge >= 21:
+if usersAge >= 21 and  usersAge <= 55:
     print("Want to go to the bar?")
+elif usersAge > 55:
+    print("You're getting pretty up there!")
 else:
-    print("You can't even drink yet!")
-    
+    print("You can't even drink yet!")'''
 
 
+# List Tips Section
+##############################################################################################
+sectionName = 'List Tips'
+print(f'{sectionName} Section')
+# Break down the string and add the indexes of the string to your list
+myList = []
 
+myString = 'Hello'
 
+for letter in myString:
+    myList.append(letter)
+print (myList)
 
+# Less code and still breaks down the string and adds the index of the string to your list
+myString = "Hello"
+myList = [letter for letter in myString]
 
+# Can add all the indexs to myList and the multiply the indexes by 3 each
+myList  = [letter * 3 for letter in myString]
+print(myList)
 
+# Can use ranges and if statements
+numList = [1,2,3,4,4,5]
+myList = [num for num in numList if num % 2 == 0]
+print(myList)
 
+# Celcius to Fahrenheit Example
+celcius = [0,10,20,30]
+fahrenheit = [((9/5)*temp +32) for temp in celcius]
+print(fahrenheit)
 
+################ This way can get confusing when you look back at your code at a later time so it's good to use the basic way for the most part
+
+# Multiple 2 lists and append them to a new one
+myList = []
+for index1 in [2,4,6]:
+    for index2 in [1,10,1000]:
+        myList.append(index1*index2)
+print(myList)
+
+# OR
+myList = [index1 * index2 for index1 in [2,4,6] for index2 in [1,10,1000]]
+print(myList)
 
 
 
@@ -781,3 +818,38 @@ l_one[2][0] >= l_two[2]['k1']
 answer = False
 
 print('This Test Has Ended! ' * 4) '''
+
+####################################################################################################################
+# Statements Test
+####################################################################################################################
+sectionName = "Statments"
+print(f'{sectionName} Test' * 8)
+
+#Use for, .split(), and if to create a Statement that will print out words that start with 's':
+st = 'Print only the words that start with s in this sentence'
+
+#Code here
+
+#Use range() to print all the even numbers from 0 to 10.
+
+#Code Here
+
+#Use a List Comprehension to create a list of all numbers between 1 and 50 that are divisible by 3.
+
+#Code here
+
+#Go through the string below and if the length of a word is even print "even!"
+
+st = 'Print every word in this sentence that has an even number of letters'
+
+#Code here
+
+#Write a program that prints the integers from 1 to 100. But for multiples of three print "Fizz" instead of the number, and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
+
+#Code here
+
+#Use List Comprehension to create a list of the first letters of every word in the string below:
+
+st = 'Create a list of the first letters of every word in this string'
+
+#Code here
