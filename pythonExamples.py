@@ -819,6 +819,19 @@ answer = False
 
 print('This Test Has Ended! ' * 4) '''
 
+
+
+
+
+
+
+
+
+
+
+
+
+'''
 ####################################################################################################################
 # Statements Test
 ####################################################################################################################
@@ -871,4 +884,4 @@ st = 'Create a list of the first letters of every word in this string'
 #Code here
 firstLetters = []
 [word[0] for word in st.split(' ')]
-print(firstLetters)
+print(firstLetters)'''
