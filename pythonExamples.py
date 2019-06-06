@@ -352,29 +352,209 @@ else:
     print("I'm not even sure I'm eating a fruit...")
 
 
+# FOR LOOPS
+#############################################################################
+sectionName = 'For Loops'
+print('{} Section'.format)
+
+fruitList = ['apples', 'peaches', 'avacados', 'pineapples', 'lemons', 'bananas']
+
+for eachFruit in fruitList:
+    print('Did you know {} were fruits?'.format(eachFruit))
+
+for eachFruit in fruitList:
+    if eachFruit == 'peaches':
+        print("I only like {}".format(eachFruit))
+    elif eachFruit == 'avacados':
+        print("I nevermind I also love {}".format(eachFruit))
+    else:
+        print ("I don't really like that fruit...")
+
+byThree = [1,3,7,9,11,27,99,5]
+
+for index in byThree:
+    if index % 3 == 0:
+        print('{} is divisible by 3!'.format(index))
+    else:
+        print('{} is not divisible by 3...'.format(index))
+
+sum = 0
+
+for index in byThree:
+    if index % 3 == 0:
+        sum += index
+    else:
+        print(f'{index} was not divisible by 3')
+
+print(f'Adding the indexes divisible by 3 in the variable byThree gave us the sum of {sum}!')
+
+# Show each sum
+sum = 0
+for index in byThree:
+    if index % 3 == 0:
+        sum += index
+        print(sum)
+
+myName = 'Darius Turner'
+
+for letter in myName:
+    print(letter)
+
+# Print string for each character in Name
+for _ in 'Name':
+    print('Copy this string!')
+
+# TUPLE UNPACKING - Tuples in list are common in Python code
+
+t = [(56,2),(3,472),(59,61.6)]
+
+for coordinate in t:
+    print(coordinate)
+
+# Can get each element in a Tuple using this method
+for (x,y) in t:
+    print(f'{x} is the x coordinate for the point!')
+    print(f'{y} is the y coordinate for the point!')
+
+for (x,y) in t:
+    print(f'{x} is the X coordinate and {y} is the Y coordinate for the point!')
 
 
+# Dictionaries Example with for loops
+d = {'k1':1,'k2':2,'k3':3}
 
+# Shows Keys
+for item in d:
+    print(item)
 
+# Shows Keys and Values
+for item in d.items():
+    print(item)
 
+# Shows Values
+for key,value in d.items():
+    print(value) 
 
+# Another method to show Values
 
+for value in d.values():
+    print(value)
 
+# WHILE LOOPS Section
+##################################################################################
+sectionName = "While Loops"
+print(f'{sectionName} Section')
 
+num = 0
+while num <= 5:
+    print(f'The current value of num is {num}')
+    num+=1
+else:
+    print(f'Num is not less that or equal to {num}')
 
+# BREAK, CONTINUE & PASS Statements
 
+# break: Breaks out of the current closest enclosing loop.
+# continue: Goes to the top of the closest enclosing loop.
+# pass: Does nothing at all.
 
+# PASS is used as a place holder for condition statments
+x = [1,2,3]
+for index in x:
+    pass
 
+# CONTINUE skips a certain value if used with an if statement and continues the loop going to the next index
+myName = 'Darius'
 
+# Prints Darus
+for letter in myName:
+    if letter == 'i':
+        continue
+    print(letter)
 
+# BREAK stops the loop at a certain point
+myName = 'Darius'
 
+# Prints Dar
+for letter in myName:
+    if letter == 'i':
+        break
+    print(letter)
 
+# Print odd numbers
+numList = [1,2,3,4,5,6]
 
+while num < len(numList):
+    if num % 2 == 0:
+        break
+    print(num)
 
+# RANGE is an easy way to define a range for a FOR LOOP
 
+# Prints 0 - 9 and does not include 10
+for num in range(10):
+    print(num)
 
+# Prints 5 - 10 and does not include 11
+for num in range(5,11):
+    print(num)
 
+# Can have a step size also - Prints odd numbers
+for num in range(5,11,2):
+    print(num)
 
+# ENUMERATE FUNCTION prints out indexes faster and easier with less code
+word = 'Cool'
+# Prints the index and letter - (index, letter)
+for item in enumerate(word):
+    print(item)
+
+# How to print either the index or letter specifically
+for index,letter in enumerate(word):
+    print(index)
+    print(letter)
+    print('\n')
+
+# ZIP function creates a Tuple of the values in different lists
+numList = [1,2,3]
+letterList = ['z','b','t']
+numList2 = [100,200,500]
+
+# If the number of indexes are uneven the zip will end after the last index on the shortest list
+for item in zip(numList,letterList,numList2):
+    print(item)
+
+# How to create a list using zip
+print(list(zip(numList,letterList,numList2)))
+
+# Returns True or False if the value is in the item
+'x' in 'Alex'
+#True
+
+numList = [1,2,3]
+4 in numList
+#False
+
+d = {'k1':789,'k2':0,'k3':{'k4':9}}
+print(9 in d['k3'].values())
+#True
+
+print(9 in d.values())
+#False
+
+9 in d['k3'].keys()
+#False
+
+'k4' in d['k3'].keys()
+#True
+
+# MIN & MAX function gets the smallest value
+numList = [9,12,5]
+print(min(numList))
+# Prints 5
+
+print(max(numList))
+# Prints 12
 
 
 
