@@ -328,6 +328,28 @@ not 1 != 1
 True
 
 
+# Python Statements Section
+#############################################################################
+sectionName = 'Python Statements'
+print('{} Section'.format(sectionName))
+
+# IF/ELSE Statments
+
+if sectionName == 'Python Statements':
+    print('You are in the Python Statements Section!')
+else:
+    print('Please check the code for your variable sectionName, because you are in the Python Statements Section...')
+
+# elif Statements are other conditions that can do something different
+
+fruit = 'Grapes'
+
+if fruit == 'Bananas':
+    print("I'm having some Bananas for luch!")
+elif fruit == 'Grapes':
+    print("I feel like I'm in Greece eating these grapes!")
+else:
+    print("I'm not even sure I'm eating a fruit...")
 
 
 
@@ -364,13 +386,7 @@ True
 
 
 
-
-
-
-
-
-
-'''' #######################################################################################################################
+''' #######################################################################################################################
 # Test # 1
 #######################################################################################################################
 print('STARTING FIRST TEST! ' * 3)
@@ -527,4 +543,4 @@ l_one[2][0] >= l_two[2]['k1']
 
 answer = False
 
-print('This Test Has Ended! ' * 4) ''''
+print('This Test Has Ended! ' * 4) '''
