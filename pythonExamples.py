@@ -635,9 +635,111 @@ print(myList)
 
 
 
+# Functions Section
+################################################################################################
+sectionName = 'Functions'
+print(f'{sectionName} Section')
+
+#Append() adds a value to the end of the list, set, str, etc..
+myList = []
+myList.append('added value')
+
+#Pop() removes the value at the end of the list,set, str, etc..
+myList.pop()
+
+#Help() prints the definition of functions and can help you learn functions on the go to use
+#help(myList.count('e'))
+
+
+#########################################################
+#How to Create a Function
+#########################################################
+
+# Example of how to create a function
+friend = 'Jason'
+
+def sayHello():
+    '''
+    A function to print Hello to your friend.
+    Input: no input
+    Output: Hello friend's name!
+    '''
+    print('Hello ' + friend + '!')
+
+sayHello()
+
+#Add an input and have a default for input value incase one isn't added when the function is called
+def findPercentage1(num = 0):
+    num = num/100.00
+    print(f'{num} %')
+
+findPercentage1(93842.66)
+
+#Make sure you return the result otherwise you can't save the result to a variable, etc...
+def findPercentage2(num = 0):
+    num = num/100.00
+    return f'{num} %'
 
 
 
+myPercent = findPercentage2(93842.66)
+print(myPercent)
+
+# Example of multiple inputs
+def add(a,b):
+    return a+b
+
+add(30,30)
+
+# Find out if there the word "car" is in the string even if "car" is capatalized
+######### in - makes a boolean statement by itself so you don't need an if statement
+def carCheck(str):
+    return 'car' in str.lower()
+
+# Pig Latin
+def pigLatin(word):
+
+    firstLetter = word[0]
+    
+    #Check if vowel
+    if firstLetter.lower() in 'aeiou':
+        pig_word = word + 'ay'
+    else:
+        pig_word = word[1:] + firstLetter + 'ay'
+
+    return pig_word
+
+print(pigLatin('Order'))
+
+
+# *args and **kwargs Section
+sectionName = '*args and **kwargs'
+print(f'{sectionName} Section')
+
+##### *args and **kwargs stand for Arguements and Keyword Arguements ####
+
+# *args allow you to pass as many arguements as you would like
+def argsFunc(*args):
+    # Returns 5% of the sum of a and b
+    return sum(args) * 0.05
+
+# **kwargs handles an as many keyword arguements as you would like
+
+def kwargsFunc(**kwargs):
+    if 'fruit' in kwargs:
+        print('My fruit of choice is {}'.format(kwargs['fruit']))
+    else:
+        print('I did not find any fruit here')
+
+kwargsFunc(fruit='pineapple', veggie='asparagus')
+
+# Can use both arguements at the same time
+def combineArgsFunc(*args,**kwargs):
+    print(args)
+    print(kwargs)
+    print('I would love to have {} of your best {} please!'.format(args[0], kwargs['meat']))
+
+combineArgsFunc(2,5,6,8, meat='wagyu', dish='chicken parmesean')
 
 
 
