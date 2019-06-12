@@ -824,6 +824,86 @@ print(makes_twenty(20,10))
 print(makes_twenty(2,3))
 
 
+####### Level 1 Problems #################
+
+#OLD MACDONALD: Write a function that capitalizes the first and fourth letters of a name
+###old_macdonald('macdonald') --> MacDonald
+
+#Note: 'macdonald'.capitalize() returns 'Macdonald'
+
+def old_macdonald(name):
+    firstLetter = name[0]
+    fourthLetter = name[3]
+    afterFirst = name[1:3]
+    afterFourth = name[4:]
+    return firstLetter.capitalize() + afterFirst + fourthLetter.capitalize() + afterFourth
+
+# Check
+print(old_macdonald('macdonald'))
+
+#MASTER YODA: Given a sentence, return a sentence with the words reversed¶
+###master_yoda('I am home') --> 'home am I'
+###master_yoda('We are ready') --> 'ready are We'
+
+def master_yoda(text):
+    words = text.split()
+    return ' '.join(words[::-1])
+
+# Check
+print(master_yoda('I am home'))
+
+# Check
+print(master_yoda('We are ready'))
+
+
+#ALMOST THERE: Given an integer n, return True if n is within 10 of either 100 or 200
+###almost_there(90) --> True
+###almost_there(104) --> True
+###almost_there(150) --> False
+###almost_there(209) --> True
+
+###NOTE: abs(num) returns the absolute value of a number
+
+def almost_there(n):
+    if n - 100 >= -10 and n - 100 <= 10:
+        return True
+    elif n - 200 >= -10 and n - 200 <= 10:
+        return True
+    else:
+        return False 
+
+# Check
+print(almost_there(104))
+
+# Check
+print(almost_there(150))
+
+# Check
+print(almost_there(209))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
