@@ -1005,6 +1005,60 @@ print(summer_69([4, 5, 6, 7, 8, 9]))
 print(summer_69([2, 1, 6, 9, 11]))
 
 
+########## Challenging Problems ##########
+
+#SPY GAME: Write a function that takes in a list of integers and returns True if it contains 007 in order
+ ###spy_game([1,2,4,0,0,7,5]) --> True
+ ###spy_game([1,0,2,4,0,5,7]) --> True
+ ###spy_game([1,7,2,0,4,5,0]) --> False
+
+def spy_game(nums):
+    spy = [0,0,7,'done']
+    for num in nums:
+        if num == spy[0]:
+            spy.pop(0)
+    return len(spy) == 1
+
+# Check
+print(spy_game([1,2,4,0,0,7,5]))
+
+# Check
+print(spy_game([1,0,2,4,0,5,7]))
+
+# Check
+print(spy_game([1,7,2,0,4,5,0]))
+
+#COUNT PRIMES: Write a function that returns the number of prime numbers that exist up to and including a given number
+####count_primes(100) --> 25
+
+#By convention, 0 and 1 are not prime.
+
+def count_primes(num):
+    if num < 2:
+        return 0
+    
+    primes = [2]
+    x = 3
+
+    while x <= num:
+        for y in range(3,x,2):
+            if x%y == 0:
+                x += 2
+                break
+        else:
+            primes.append(x)
+            x += 2
+    print(primes)
+    return len(primes)
+
+
+# Check
+print(count_primes(100))
+
+
+
+
+
 
 
 
