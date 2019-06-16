@@ -743,6 +743,56 @@ combineArgsFunc(2,5,6,8, meat='wagyu', dish='chicken parmesean')
 
 
 
+# Lambda Expressions - Map & Filter Section
+########################################################################################################
+sectionName = 'Lambda Expressions - Map & Filter Section'
+print(f'{sectionName} Section')
+
+### Map function is used to be a simplified for loop for adding a function or making changes to all of a lists indexes more efficiently
+def cubed(num):
+    return num**3
+
+my_nums = [1,2,3,4,5]
+
+for index in map(cubed,my_nums):
+    print(index)
+
+# Or if you want the List back rather than each index
+
+print(list(map(cubed,my_nums)))
+
+def findEvenStr(myString):
+    if len(myString) % 2 == 0:
+        return 'Even'
+    else:
+        return myString[0]
+
+names = ['Andy','Eve', 'Steve']
+
+print(list(map(findEvenStr,names)))
+
+# Filter function filters values if they are true or false regarding the statement
+
+def check_even(num):
+    return num%2 == 0
+
+my_nums = [1,2,3,4,5,6]
+
+print(list(filter(check_even,my_nums)))
+
+for index in filter(check_even,my_nums):
+    print(index)
+
+# Lambda Expressions are like one time functions
+
+lambda num: num**2
+
+# Fast way to add simple functions in a map or filter functions
+print(list(map(lambda num: num**2, my_nums)))
+
+print(list(filter(lambda num: num%2 == 0, my_nums)))
+
+print(list(map(lambda name: name[0:3], names)))
 
 
 
@@ -791,6 +841,35 @@ combineArgsFunc(2,5,6,8, meat='wagyu', dish='chicken parmesean')
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
 
 ##########################################################
 #Function Exercises Section
@@ -1054,6 +1133,7 @@ def count_primes(num):
 
 # Check
 print(count_primes(100))
+'''
 
 
 
@@ -1063,6 +1143,112 @@ print(count_primes(100))
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##########################################################
+#Functions and Methods Homework Section
+##########################################################
+sectionName = 'Functions and Methods Homework'
+print(f'{sectionName} Section')
+
+# Write a function that computes the volume of a sphere given its radius
+
+def vol(rad):
+    result = round(4/3 * (3.14 *(rad**3)), 2)
+    return f'The volume of a sphere with a radius of {rad} is {result}'
+
+print(vol(1))
+
+
+# Write a function that checks wheather a number is in a give range (Inclusive of high and low)
+
+def ran_check(num,low,high):
+    if num >= low and num <= high:
+        return 'Your number is inside the given range of {} to {}'.format(low,high)
+    else:
+        return 'Your number was not found inside the range of {} to {}'.format(low,high)
+
+print(ran_check(9,9,10))
+
+# If you only wanted to return a Boolean
+
+def ran_bool(num,low,high):
+    return num in range(low, high + 1)
+
+print(ran_bool(-11,-10,4))
+
+# Write a function that accepts a string and calculates the number of upper and lowercase letters
+##### I did it this way that way you if you would want a list to print or return the letters that are uppercase and lowercase ########
+def up_lows(s):
+    uppers = []
+    lowers = []
+    for index in s:
+        if index.isupper():
+            uppers.append(index)
+        elif index.islower():
+            lowers.append(index)
+        else:
+            pass
+    return "There were {} uppercase letters and {} lowercase letters in the string '{}'".format(len(uppers),len(lowers),s)
+
+print(up_lows('Hell0'))
+
+
+# Write a function that takes a list and returns a new list with unique elements in the first list
+
+def unique_list(l):
+    return set(l)
+
+print(unique_list([1,2,2,3,3,4,6,6,4,5,9,2]))
+
+# Write a function that multiplies all the numbers in a list together
+
+def mult_list(l):
+    result = 1
+    for index in l:
+        result *= index
+    return result
+
+print(mult_list([2,3,6]))
+
+# Write a function that is a palindrome (word or phrase that reads the same backwords)
+
+def palindrome(s):
+    return s.lower() == s[::-1].lower()
+       
+
+print(palindrome('helleh'))
+
+# Write a function to check if a string is a panagram or not
+
+import string
+
+def ispanagram(str1, alphabet = string.ascii_lowercase):
+    alphset = set(alphabet)
+    return alphset <= set(str1.lower())
+
+print(ispanagram('The quick brown fox jumps over the lazy dog'))
+        
 
 
 
